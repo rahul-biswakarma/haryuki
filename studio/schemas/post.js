@@ -1,3 +1,5 @@
+import themeList from "./themeList";
+
 export default {
   name: "post",
   title: "Post",
@@ -50,7 +52,19 @@ export default {
     {
       name: "publishedAt",
       title: "Published at",
-      type: "datetime",
+      type: "date",
+      options: {
+        dateFormat: "MMM D, Y",
+        calendarTodayLabel: "Today",
+      },
+    },
+    {
+      title: "theme",
+      name: "Theme",
+      type: "string",
+      options: {
+        list: [...themeList],
+      },
     },
     {
       name: "body",
